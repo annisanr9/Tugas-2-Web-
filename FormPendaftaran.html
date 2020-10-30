@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+    <meta charset="utf-8" />
+	<title>Form Pendaftaran</title>
+	<body background ="nisa2.png">
+    <style>
+      body {font-family: felix titling, sans-serif;}
+      input[type=text], input[type=date], input[type=number], input[type=email], select, textarea {
+        width: 100%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        border: 1px solid #ccc;
+	box-shadow: 0 0 10px #719ECE;
+        border-radius: 4px;
+        box-sizing: border-box;
+      }
+
+      input[type=radio]{
+        padding: 12px 20px;
+        margin: 15px;
+      }
+
+      input[type=submit] {
+        width: 20%;
+        background-color: #800000;
+        color: white;
+        padding: 10px 20px;
+        margin: 8px 0;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+
+      input[type=submit]:hover {
+        background-color: #45a049;
+      }
+
+      textarea {
+        width: 100%;
+        height: 150px;
+        padding: 12px 20px;
+        box-sizing: border-box;
+    	box-shadow: 0 0 10px #719ECE;
+        border-radius: 4px;
+        background-color: #f8f8f8;
+        font-size: 16px;
+        resize: none;
+      }
+
+      .container {
+        border-radius: 5px;
+        background-color: rgb(255, 0, 0, 0.2);
+        padding: 50px;
+        width : 70%;
+        margin : auto;
+      }
+
+      h2{
+        text-align : center;
+      }
+      label{
+        font-size:18px;
+        font-weight: bold;
+      }
+      
+  
+    </style>
+  </head>
+  <body>
+    <h1><center>Formulir Pendaftraan</h1></center><br /><br />
+    <div class = "container">
+      <h2>Biodata</h2> <hr />
+      <form action="/action_page.php">
+        <label>Nama Lengkap</label>
+        <input type="text" id="fname" nama="fname" placeholder="Nama Lengkap..">
+	
+        <label for="lahir">Tanggal Lahir</label>
+        <input type="date" id="lahir" name="lahir">
+        <label>Jenis Kelamin</label> <br /> 
+        <input type="radio" id="Pria" name="Jenis Kelamin" value="Pria">
+        <label for="male">Pria</label>
+        <input type="radio" id="Wanita" name="Jenis Kelamin" value="Wanita">
+        <label for="female">Wanita</label>
+	<p class="input-file-wrapper">
+        <label for="upload">Unggah Foto Max 2MB </label>
+        <input type="file" name="foto" id="upload">
+   	 </p>
+        <br /><br />
+
+        <h2>Data Kontak</h2> <hr />
+        <label>Alamat</label>
+        <textarea name="name" rows="5" cols="50"></textarea> 
+	<div class="row">
+    	<div class="col-25">
+      	<label for="negara">Kewarganegaraan</label>
+    	</div>
+    	<div class="col-75">
+      	<select id="negara" name="negara">
+        <option value="indonesia">Indonesia</option>
+        <option value="Arab">Arab</option>
+        <option value="Mesir">Mesir</option>
+        <option value="German">German</option>
+      </select>
+        <label>Nomor Handphone</label>
+        <input type="number" id="phone" name="phone">
+        <label>E-mail</label>
+        <input type="email" id="email" name="email" placeholder="Your email..">
+        <br /><br />
+
+        <h2>Data Kemahasiswaan</h2> <hr />
+        <label>Tahun Ajaran</label>
+        <select id="year" name="year">
+          <option value="2020/2021">2020/2021</option>
+          <option value="2019/2020">2019/2020</option>
+          <option value="2018/2019">2018/2019</option>
+        </select>
+        <label>Program Pendidikan</label> <br /> 
+        <input type="radio" id="ti" name="dept" value="ti">
+        <label for="ti">Teknik Informatika</label>
+        <input type="radio" id="si" name="dept" value="si">
+        <label for="si">Sistem Infromasi</label>
+	<br />
+        <input type="submit" value="Submit">
+      </form>
+    </div>
+
+  </body>
+</html>
